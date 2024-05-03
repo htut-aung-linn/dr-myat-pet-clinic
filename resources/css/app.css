@@ -1,0 +1,35 @@
+
+
+.nav{
+    display: flex;   
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+}
+    
+.icon{
+    width: 5rem;
+    height: 5rem;
+}
+
+h1{
+    text-align: center;
+    font-size: 32px;
+    stroke: 1px;
+    text-shadow: 1px 1px 2px black;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    /* identical to box height */
+    text-align: center;
+
+    color: #FFFFFF;
+
+    mix-blend-mode: luminosity;
+    border: 6px solid #320808;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
