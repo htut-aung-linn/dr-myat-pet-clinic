@@ -2,11 +2,11 @@
     <!-- Be present above all else. - Naval Ravikant -->
     <!-- menu -->
     
-        <svg onclick="openWindow()" class="icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg id="menu-open" onclick="openWindow()" class="icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="35.4167" cy="16.6667" r="8.33333" fill="#33363F"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M29.1756 15.5833H39.5833C40.1356 15.5833 40.5833 15.1356 40.5833 14.5833C40.5833 14.0311 40.1356 13.5833 39.5833 13.5833H29.8833C29.5419 14.1947 29.2988 14.8685 29.1756 15.5833ZM28.1366 24C28.959 24.8165 29.918 25.4956 30.9763 26H10.4167C9.86439 26 9.41667 25.5523 9.41667 25C9.41667 24.4477 9.86439 24 10.4167 24H28.1366ZM25.1394 15.5833C25.2112 14.8943 25.3507 14.2254 25.5512 13.5833H10.4167C9.86439 13.5833 9.41667 14.0311 9.41667 14.5833C9.41667 15.1356 9.86439 15.5833 10.4167 15.5833H25.1394ZM10.4167 34.4167C9.86439 34.4167 9.41667 34.8644 9.41667 35.4167C9.41667 35.969 9.86439 36.4167 10.4167 36.4167H39.5833C40.1356 36.4167 40.5833 35.969 40.5833 35.4167C40.5833 34.8644 40.1356 34.4167 39.5833 34.4167H10.4167Z" fill="#33363F"/>
         </svg>
-    <h1>Pet Products</h1>
+    <h1>Dr. Myat's Pet Clinic</h1>
     
     <!-- shop -->
     <a href="/PetProduct.com"><svg class="icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,28 +20,28 @@
 </div>
 <div id="menu">
     <div id="m-g">
-    <a href="/"><h3 
+    <a href="/"><h3 class="menu-item
         @if($pageName=="Home")
-        class="active"
-        @endif
+        active
+        @endif"
         >Home</h3><a>
-        <a href="/PetProduct.com"><h3
+        <a href="/PetProduct.com"><h3 class="menu-item
         @if($pageName=="product")
-        class="active"
-        @endif
+        active
+        @endif"
         >Products</h3></a>
-        <a href="/petCare.com"><h3
+        <a href="/petCare.com"><h3 class="menu-item 
         @if($pageName=="petCare")
-        class="active"
-        @endif
+        active
+        @endif"
         >Pet care</h3></a>
-        <a href="/AboutUs.com"><h3
+        <a href="/AboutUs.com"><h3 class="menu-item
         @if($pageName=="about")
-        class="active"
-        @endif
+        active
+        @endif"
         >About us</h3></a>
     </div>
-    <svg onclick="closeWindow()" width="100" height="100" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg  id="close-btn" class="icon" onclick="closeWindow()" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="50" height="50" fill="white"/>
         <path d="M6.25 10.25C6.25 8.04086 8.04086 6.25 10.25 6.25H39.75C41.9591 6.25 43.75 8.04086 43.75 10.25V39.75C43.75 41.9591 41.9591 43.75 39.75 43.75H10.25C8.04086 43.75 6.25 41.9591 6.25 39.75V10.25Z" fill="#7E869E" fill-opacity="0.25"/>
         <path d="M18.7502 31.2493L31.2502 18.7493" stroke="#222222" stroke-width="1.2"/>
@@ -49,75 +49,6 @@
     </svg>
 
 </div>
-
-<style>
-    .nav{
-        display: flex;   
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center; 
-        background-color: #D9D9D9;
-        position: -webkit-sticky; /* Safari */
-        position: sticky;
-        top: 0;
-    }
-        
-    .icon{
-        width: 5rem;
-        height: 5rem;
-    }
-    a{
-        text-decoration: none;
-    }
-    a:hover{
-        background-color:#817474;
-    }
-    h3{
-        font-size: 70px;
-        padding: 1em;
-        margin:0em;
-        color: black;
-    }
-    h1{
-    font-size: 70px;
-    stroke: 1px;
-    text-shadow: 1px 1px 2px 2px black;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 39px;
-    /* identical to box height */
-    text-align: center;
-
-    color: #000;
-
-    mix-blend-mode: luminosity;
-
-    }
-
-    #menu{
-        display : none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        border: 3px solid #73AD21;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: left; 
-        width: fit-content;
-        height : 100%;
-        z-index:5;
-    }
-    #m-g{
-        background-color: #D9D9D9;
-        width: fit-content;
-        height : 100%;
-    }
-    .active{
-        background-color:#817474;
-    }
-</style>
 
 <script>
         

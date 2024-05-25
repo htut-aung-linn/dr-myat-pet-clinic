@@ -1,0 +1,46 @@
+.product{
+    /* Rectangle 43 */
+    padding: 0em;
+    background: var(--background-3);
+    margin: 0.5em;
+    width: 95%;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    margin-bottom: 1.5em;
+}
+
+.p-image{
+    width: 100%;
+    height: auto;
+}
+
+.p-title{
+    font-size: 1.1em;
+    text-align: center;
+    margin: 0.2em;
+}
+
+.p-price{
+    font-size: 1em;
+    text-align: right;
+    margin: 0.5em;
+    margin-right: 1em;
+}
+
+.p-desc{
+    font-size: 1em;
+    text-align: center;
+    margin: 0.2em;
+}
+
+.p-ldesc{
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .product{
+        flex: 0 1 auto; 
+        max-width: 280px;
+        margin: 5px;
+    }
+}
