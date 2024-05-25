@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\adminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,15 @@ use App\Http\Controllers\UserController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+// login page for admin
+Route::view('/login', 'adminLogin', ['warning'=>'none']);
+
+//check login date
+Route::post('/check', [adminController::class, 'LoginCheck']);
+
+Route::get('/deshbroad', function(){
+    return "admin";
+})->middleware('admin');
 
 Route::get('/', function () {
     return view('Home');
